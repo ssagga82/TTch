@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tcheck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- الصفحة الأولى -->
+    <div class="container" id="page1">
+        <div class="form-container">
+            <h1>𝑻𝒄𝒉𝒆𝒄𝒌</h1>
+            <p>مرحبا بك    </p>
+            <form id="userForm">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" required>
+                <label for="age">العمر:</label>
+                <input type="number" id="age" required>
+                <button type="submit">التالي</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- الصفحة الثانية -->
+    <div class="container" id="page2" style="display:none;">
+        <div class="form-container">
+            <h1>أهلاً</h1>
+            <p>اختار نوع الحساسية</p>
+            <div class="allergy-options">
+                <div class="option" onclick="selectAllergy(this, 'لوز')">
+                    <img src="https://i.postimg.cc/pdqdKBB7/almond-2.png" alt="لوز">
+                    <p>لوز</p>
+                </div>
+                <div class="option" onclick="selectAllergy(this, 'حليب')">
+                    <img src="https://i.postimg.cc/Bbq9NWQB/milk-box.png" alt="حليب">
+                    <p>حليب</p>
+                </div>
+                <div class="option" onclick="selectAllergy(this, 'بيض')">
+                    <img src="https://i.postimg.cc/MKVK9wD1/boiled-egg.png" alt="بيض">
+                    <p>بيض</p>
+                </div>
+                <div class="option" onclick="selectAllergy(this, 'قمح')">
+                    <img src="https://i.postimg.cc/KzS0rnvP/wheat.png" alt="قمح">
+                    <p>قمح</p>
+                </div>
+                <div class="option" onclick="selectAllergy(this, 'فول سوداني')">
+                    <img src="https://i.postimg.cc/DzV02Zwj/peanut.png" alt="فول سوداني">
+                    <p>فول سوداني</p>
+                </div>
+                <div class="option" onclick="selectAllergy(this, 'سمك')">
+                    <img src="https://i.postimg.cc/QMr6cQMp/fish-2.png" alt="سمك">
+                    <p>سمك</p>
+                </div>
+            </div>
+            <button class="next-button" id="nextButton" disabled>التالي</button>
+        </div>
+    </div>
+
+    <!-- الصفحة الثالثة: تحقق من المنتج -->
+    <div class="container" id="page3" style="display:none;">
+        <div class="form-container">
+            <h1>افحص منتجك</h1>
+            <p>إدخل رقم الباركود</p>
+            <input type="text" id="barcodeInput" placeholder="إدخل رقم الباركود">
+            <button id="scanButton">تحقق</button>
+
+            <!-- عرض نتيجة الفحص -->
+            <div id="result" style="display:none;">
+                <h2 id="resultText"></h2>
+                <button id="goBackButton">رجوع</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- إضافة صورة الباركود (عند الحاجة) -->
+    <img id="barcodeImage" src="" alt="Barcode Image" style="display:none;" />
+
+    <script src="script.js"></script>
+</body>
+</html>
