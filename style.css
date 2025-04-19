@@ -1,0 +1,150 @@
+/* إضافة خط مميز من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-image: url('https://i.postimg.cc/c15QX21Q/IMG-4085.jpg'); /* الخلفية الجديدة */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5); /* شفافية الخلفية */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* تصميم المحتوى */
+.container {
+    background: rgba(250, 249, 240, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #3e5c56;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    color: #6c7c5b;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* تنسيق الحقول ليكون الاسم والعمر تحت بعضهما */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #3e5c56;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #5a9e6f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+button:hover {
+    background-color: #4b8a59;
+}
+
+button:enabled {
+    opacity: 1;
+}
+
+/* تصميم الصفحة الثانية */
+.allergy-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.option {
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent; /* لا يوجد إطار افتراضي */
+    border-radius: 10px;
+    padding: 10px;
+    transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.option:hover {
+    transform: scale(1.1); /* تكبير الأيقونة عند المرور عليها */
+}
+
+.option.selected {
+    border: 2px solid #5a9e6f; /* إضافة إطار عند الاختيار */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* إضافة تأثير ظل */
+}
+
+.option img {
+    width: 70px;
+    height: 70px;
+}
+
+.option p {
+    margin-top: 10px;
+    color: #3e5c56;
+    font-size: 18px;
+}
+
+/* تصميم الصفحة الثالثة */
+#result {
+    text-align: center;
+}
+
+#resultText {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+#goBackButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#goBackButton:hover {
+    background-color: #c0392b;
+}
